@@ -82,7 +82,7 @@
 
     <!-- Bela pozadina -->
     <div class="bg-white text-black">
-        <p class="italic text-2xl sm:text-4xl py-20 px-4 w-full sm:w-3/4 mx-auto text-center tracking-widest" style="font-family: Source Code Pro;">
+        <p id="quotes "class="italic text-2xl sm:text-4xl py-20 px-4 w-full sm:w-3/4 mx-auto text-center tracking-widest" style="font-family: Source Code Pro;">
             From the material to the informational, the static to the
              dynamic, the isolated to the networked</p>
     </div>
@@ -478,3 +478,88 @@
     background-color: black;
 } */
 </style>
+
+<script type="text/javascript">
+    // console.log()
+    // function sendEmail() {
+    //   Email.send({
+    //     Host: "smtp.elasticemail.com",
+    //     Username: "pavlevolsebni@gmail.com",
+    //     Password: "13908977C0A7499C6310F1A9A9DC4BE47185",
+    //     To: "alexusnavas@gmail.com.com",
+    //     From: "pavlevolsebni@gmail.com",
+    //     Subject: "Sending Email using javascript",
+    //     Body: "Well that was easy!!",
+    //   })
+    //     .then(function (message) {
+    //       alert("mail sent successfully")
+    //     });
+    // }
+
+    // Function to change the button content randomly
+
+
+    // 1st attempt 
+
+    // function changeButtonContent() {
+    //     // 1st attempt 
+    
+    
+    //     // Wrap the code in the DOMContentLoaded event handler
+    //     document.addEventListener('DOMContentLoaded', function() {
+        
+    //     console.log("Content loaded...");
+    //     // Get the button element
+    //     const button = document.getElementById('quotes');
+
+    //     // Array of possible quote labels
+    //     const quotes = 
+    //     [`We need a set of shared economic protocols, rather than only blockchain ones.`,
+    //     `We're not just redefining value, we're expanding it. From the material to the informational, the static to the dynamic, the isolated to the networked.`,
+    //     `In the postcapitalist era, art and play aren't just forms of expression, they're powerful forces of change, reshaping the political landscape and transforming our world.`,
+    //     `Decolonisation of finance is not a question of escape, but rather of reappropriating the capacity of assembly, of affinity, of association, of value giving circulation that capital & finance claim to belong to them.`,
+    //     `Our wager is that a clear spread will open between what the old and the new economic space make possible - there is a clear difference in their expressive capacity, accessibility, stability, adaptability, scalability, privacy, functional equality and programmability. When people start to feel this, on which side of the spread do you want to be?`
+    //     ]
+
+    //     // Generate a random index
+    //     const randomIndex = Math.floor(Math.random() * quotes.length);
+    //     // Set the button's innerHTML to a random label from the array
+    //     button.innerHTML = quotes[randomIndex];
+
+    //     // Trigger the function when the page loads
+    //     changeButtonContent();
+    //     // Change the button content every 3 seconds (3000 milliseconds)
+    //     setInterval(changeButtonContent, 3000);
+    // });
+    // }
+
+    // 2nd attempt
+
+    // Get the button element
+    const button = document.getElementById('quotes');
+
+    // Array of possible quote labels
+    const quotes = 
+    [`We need a set of shared economic protocols, rather than only blockchain ones.`,
+    `We're not just redefining value, we're expanding it. From the material to the informational, the static to the dynamic, the isolated to the networked.`,
+    `In the postcapitalist era, art and play aren't just forms of expression, they're powerful forces of change, reshaping the political landscape and transforming our world.`,
+    `Decolonisation of finance is not a question of escape, but rather of reappropriating the capacity of assembly, of affinity, of association, of value giving circulation that capital & finance claim to belong to them.`,
+    `Our wager is that a clear spread will open between what the old and the new economic space make possible - there is a clear difference in their expressive capacity, accessibility, stability, adaptability, scalability, privacy, functional equality and programmability. When people start to feel this, on which side of the spread do you want to be?`
+    ]
+
+    // Function to change the button content randomly
+    function changeButtonContent() {
+    // Generate a random index
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    // Set the button's innerHTML to a random label from the array
+    button.innerHTML = quotes[randomIndex];
+    }
+
+    // Trigger the function when the page loads
+    window.onload = function() {
+    changeButtonContent();
+    // Change the button content every 3 seconds (3000 milliseconds)
+    setInterval(changeButtonContent, 3000);
+    };
+
+  </script>
