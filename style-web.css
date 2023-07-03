@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'Mattone';
+  src: url('fonts/Mattone-150.woff2') format('woff2'),
+       url('fonts/Mattone-150.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+    --wNode: calc(20px + 1vw);
+    --wNodeLogo: 16px;
+    --canvasMargin: 0px;
+    --coverWidth: 100%;
+    --coverHeight: 100vh;
+  }
+
+  body{
+    background-color: black;
+    padding: var(--canvasMargin);
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  #bookAndButtonContainer{
+    margin: 8vh auto;
+    max-width: 1280px;
+    width: 50vw;
+    min-width: 300px;
+    position: relative;
+    z-index: 5;
+  }
+
+  #generativeBook{
+    padding: 1vw;
+    max-width: 640px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 6px;
+    background-color: rgba(113,90,115,0.2);
+    border: 1px inset rgba(243,255,232, 0.5);
+    backdrop-filter: blur(16px);
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.9);
+    transition: background-color 600ms;
+  }
+
+  #generativeBook:hover{
+    background-color: rgba(123,100,120,0.3);
+  }
+
+  #generativeBookImg{
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 4px;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.8);
+    transform: rotate(0deg);
+    cursor: crosshair;
+    transition: box-shadow 400ms;
+  }
+
+  #generativeBookImg:hover{
+    box-shadow: 0px 0px 24px rgba(0,0,0,1);
+  }
+
+  h1{
+    color: white;
+    text-shadow: 0px 0px 12px rgba(0,0,0,0.8);
+    font-family: 'Mattone';
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  #publishBookButton{
+    width: 50%;
+    cursor: pointer;
+    margin-left: 25%;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    text-align: center;
+    padding: calc(8px + 1vw) calc(16px + 1vw);
+    color: white;
+    text-shadow: 0px 0px 12px rgba(0,0,0,0.8);
+    border-radius: 200px;
+    background-color: rgba(203,190,235,0.2);
+    border: 1px inset rgba(253,255,222, 0.5);
+    backdrop-filter: blur(16px);
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.9);
+    font-family: 'Source Sans 3', sans-serif;
+    transition: background-color 600ms, box-shadow 300ms, border 300ms;
+  }
+
+  #publishBookButton:hover{
+    background-color: rgba(253,230,255,0.3);
+    border: 1px inset rgba(253,255,252, 0.7);
+    box-shadow: 0px 0px 12px rgba(200,200,200,0.3);
+  }
+
+  #knowMoreLink{
+    width: 40%;
+    margin-left: 30%;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 12px rgba(0,0,0,0.8);
+    position: relative;
+    display: inline-block;
+  }
+
+  #knowMoreLink:hover{
+    text-decoration: none;
+  }
+
+  #bgA{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    filter: blur(2px) drop-shadow(0px 0px 6px rgb(115, 125, 77));
+    mix-blend-mode: color-dodge;
+    pointer-events: none;
+  }
+
+  #bgB{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0.4;
+    filter: blur(1px);
+    mix-blend-mode: difference;
+  }
+
+  #cover{
+    width: var(--coverWidth);
+    height: var(--coverHeight);
+    background-color: rgb(0,0,0);
+    border-radius: 0px;
+    box-shadow: 0px 0px 24px rgba(0,0,0,0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  #drawing{
+    width: var(--coverWidth);
+    height: var(--coverHeight);
+    height: 3307px;
+    position: absolute;
+    top: var(--canvasMargin);
+    left: var(--canvasMargin);
+    z-index: 0;
+  }
+
+  .empty{
+    width: 1px;
+    height: 1px;
+  }
+
+  #protocolsBG{
+    width: 1830px;
+    height: 1150px;
+    position: absolute;
+    left: 200px;
+    top: 1100px;
+    grid-gap: 60px;
+    display: grid;
+    grid-template-columns: 7fr 6fr 5fr 4fr 3fr;
+    grid-template-rows: 8fr 7fr 6fr 5fr;
+    justify-items: end;
+    justify-content: space-around;
+    display: none;
+  }
+
+  #grid{
+    height: 98%;
+    width: 84%;
+    display: grid;
+    margin: 2vw 6vw;
+
+    grid-template-rows: var(--wNode) 9fr var(--wNode) 8fr var(--wNode) 7fr var(--wNode) 6fr var(--wNode) 5fr var(--wNode) 4fr var(--wNode) 3fr var(--wNode) 2fr var(--wNode);
+    grid-template-columns: var(--wNode) 2fr var(--wNode) 3fr var(--wNode) 4fr var(--wNode) 5fr var(--wNode) 6fr var(--wNode) 7fr var(--wNode) 8fr var(--wNode);
+
+    pointer-events: none;
+    justify-items: center;
+  }
+
+  .img-grid{
+    width: 100%;
+    z-index: 3;
+    border-radius: 8px;
+    filter: drop-shadow(0px 0px 4px black);
+    align-self: center;
+  }
+
+
+  .drawingElement{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--coverWidth);
+    height: var(--coverHeight);
+    z-index: -1;
+  }
+
+  .mFrames{
+    width: 200px;
+    height: 130px;
+    opacity: 1;
+    transform: rotate(45deg);
+    filter: blur(1px) drop-shadow(0px 0px 6px blue);
+    border: 2px solid rgba(255, 7, 135, 0.2);
+  }
+
+  .gradientCone{
+    opacity: 0.9;
+    filter: drop-shadow(0px 0px 8px violet);
+  }
+
+  .spider{
+    opacity: 0.8;
+  }
+
+  .spiderHead{
+    opacity: 0.9;
+  }
+
+  .octopus{
+    filter: drop-shadow(0px 0px 3px green);
+  }
+
+  .pipeB{
+    filter: blur(8px) drop-shadow(0px 0px 6px #990033);
+  }
+
+  .pipe{
+    filter: blur(4px) drop-shadow(0px 0px 8px #ff0088);
+  }
