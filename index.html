@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>latest</title>
+    <title>Discourse</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style-web.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -367,8 +367,8 @@
                 <div x-show="tab == '#tab2'" x-cloak class="flex text-center">
                     
                     <div class="w-full sm:w-1/2 pt-6">
-                        <h4 class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4 font-bold" style="font-family: Source Code Pro;">Become a copublisher</h4>
-                        <p class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;"> Each NFT represents a book paragraph/glossary word, a discourse unit. Acquiring it also reveals the unit for public reading, turning it into a commons.</p>
+                        <h4 class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4 font-bold" style="font-family: Source Code Pro;" id="howContentHeading">Become a copublisher</h4>
+                        <p class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;"id="howContentText"> Each NFT represents a book paragraph/glossary word, a discourse unit. Acquiring it also reveals the unit for public reading, turning it into a commons.</p>
 
                         <div class="flex justify-center text-center items-center py-6 sm:pt-12">
                             <i id="howContentLeftArrow" class="fa-solid fa-chevron-left text-xl px-2 cursor-pointer"></i>
@@ -615,22 +615,14 @@
 </style>
 
 <script type="text/javascript">
-    // console.log()
-    // function sendEmail() {
-    //   Email.send({
-    //     Host: "smtp.elasticemail.com",
-    //     Username: "pavlevolsebni@gmail.com",
-    //     Password: "13908977C0A7499C6310F1A9A9DC4BE47185",
-    //     To: "alexusnavas@gmail.com.com",
-    //     From: "pavlevolsebni@gmail.com",
-    //     Subject: "Sending Email using javascript",
-    //     Body: "Well that was easy!!",
-    //   })
-    //     .then(function (message) {
-    //       alert("mail sent successfully")
-    //     });
-    // }
 
+    document.getElementById('publishBookButton').addEventListener('click', function() {
+      // Get the target element by its ID
+      const targetElement = document.getElementById('targetElement');
+  
+      // Scroll to the target element
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    });
     // Get the button element
     const button = document.getElementById('quotes');
 
