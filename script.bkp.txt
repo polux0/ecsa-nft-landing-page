@@ -1,0 +1,113 @@
+<script type="text/javascript">
+    // console.log()
+    // function sendEmail() {
+    //   Email.send({
+    //     Host: "smtp.elasticemail.com",
+    //     Username: "pavlevolsebni@gmail.com",
+    //     Password: "13908977C0A7499C6310F1A9A9DC4BE47185",
+    //     To: "alexusnavas@gmail.com.com",
+    //     From: "pavlevolsebni@gmail.com",
+    //     Subject: "Sending Email using javascript",
+    //     Body: "Well that was easy!!",
+    //   })
+    //     .then(function (message) {
+    //       alert("mail sent successfully")
+    //     });
+    // }
+
+    // Get the button element
+    const button = document.getElementById('quotes');
+
+    // Array of possible quote labels
+    const quotes = 
+    [`We need a set of shared economic protocols, rather than only blockchain ones.`,
+    `We're not just redefining value, we're expanding it. From the material to the informational, the static to the dynamic, the isolated to the networked.`,
+    `In the postcapitalist era, art and play aren't just forms of expression, they're powerful forces of change, reshaping the political landscape and transforming our world.`,
+    `Decolonisation of finance is not a question of escape, but rather of reappropriating the capacity of assembly, of affinity, of association, of value giving circulation that capital & finance claim to belong to them.`,
+    `Our wager is that a clear spread will open between what the old and the new economic space make possible - there is a clear difference in their expressive capacity, accessibility, stability, adaptability, scalability, privacy, functional equality and programmability. When people start to feel this, on which side of the spread do you want to be?`
+    ]
+
+    // Function to change the button content randomly
+    function changeButtonContent() {
+    // Generate a random index
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    // Set the button's innerHTML to a random label from the array
+    button.innerHTML = quotes[randomIndex];
+    }
+
+    // Trigger the function when the page loads
+    window.onload = function() {
+    changeButtonContent();
+    changeHowContent();
+    // Change the button content every 4 seconds (4000 milliseconds)
+    setInterval(changeButtonContent, 4000);
+    };
+
+    //Publish the book together section
+
+
+    // TO BE DONE
+    function changeHowContent(){
+
+
+        const current = 1;
+
+        const howsTitles =  [
+        ``,
+        `Become a co-publisher:`,
+        `Get the PDF & Print Book: `,
+        `Enrich the Discourse: `,
+        `Value the Discourse: `,
+        `Expand Your Economic Options: `,
+        `Generate the Discourse: `,
+        `Enjoy the open access publication experience:`,
+        `Become a Stakeholder in the Discourse:`
+        ];
+        
+        const howsContent = [
+        ``,
+        `Each NFT represents a book paragraph/glossary word, a discourse unit. Acquiring it also reveals the unit for public reading, turning it into a commons.`,
+        `Your NFT grants access to a PDF version of the book with a unique cover, helping you understand the context and value of your discourse unit. You will also get the right to get the print-copy of the book.`,
+        `As an NFT holder, invite up to three comrades who can enrich the discourse.`,
+        `List your NFT in markets to spread the discourse and influence its valuation.`,
+        `The NFT provides access to the ECSA token multistake whitelist.`,
+        `Share insights, engage with the discourse, participate in discourse-shaping discussions, online and offline.`,
+        `When all the NFTs have been purchased, the entire open access publication experience is revealed: the book website, its mobile version, audiobook, different download options etc.`,
+        `After the book fully revealed, it will also be released as a singular fractional NFT: you become a stakeholder of its value as an informational asset, minting new NFTs to grow the network.`
+        ];
+
+
+        var howContentLeftArrow = document.getElementById('howContentRightArrow');
+        var howContentRightArrow = document.getElementById('howContentLeftArrow');
+        var howContentCurrent = document.getElementById('howContentCurrent');
+
+        howContentLeftArrow.addEventListener('click', function() {
+
+            if(current = 1){
+                current=1;
+            }
+            else{
+                current--;
+            }
+            howContentCurrent.innerHtml = current;
+            howsTitles.innerHtml = howsTitles[current];
+            howsContent.innerHtml = howsContent[current];
+        });
+
+        howContentRightArrow.addEventListener('click', function() {
+
+            if(current = 8){
+                current = 1;
+            }
+            else{
+                current++;
+            }
+            howContentCurrent.innerHtml = current;
+            howsTitles.innerHtml = howsTitles[current];
+            howsContent.innerHtml = howsContent[current];
+        });
+    }
+
+    // arrow to the next section, on click:
+    
+  </script>

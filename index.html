@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3</title>
-    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style-web.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,9 +12,68 @@
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/5592293c7c.js" crossorigin="anonymous"></script>
+
 </head>
 <body class="bg-black text-white">
 
+    <nav class="bg-black text-white border-gray-200">
+
+        <div class="flex flex-wrap items-center justify-between mx-auto p-4">
+
+            <div class="items-center py-5">
+                <p class="sm:pl-8 text-left">Protocols for</p>
+                <p class="sm:pl-8 text-left">Postcapitalist Expression</p> 
+            </div>
+
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        </button>
+        
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-black md:flex-row md:space-x-8 md:mt-0 md:border-0">
+                <!-- <div class="sm:w-1/2 py-5 flex justify-evenly"></div> -->
+              <li class="flex justify-center pb-12 sm:pb-0 hover:underline">
+                <a href="" class="text-xl sm:px-4 sm:py-2 mx-2 sm:mx-6">DISCOURSE</a>
+            </li>
+              <li class="flex justify-center pb-12 sm:pb-0 hover:underline">
+                <a href="" class="text-xl sm:px-4 sm:py-2 mx-2 sm:mx-6">PROPERTIES</a>
+            </li>
+              <li class="flex justify-center pb-12 sm:pb-0 hover:underline">
+                <a href="" class="text-xl sm:px-4 sm:py-2 mx-2 sm:mx-6">DEVELOPERS</a>
+            </li>
+              <li class="flex justify-center">
+                <a href="" class=" hover:bg-neutral-900 text-xl sm:px-4 sm:py-2 mx-2 sm:mx-6 rounded-full border border-white py-2 px-4 sm:py-0 sm:px-0">PUBLISH THE BOOK</a>
+            </li>
+
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+
+    <div style="background-image: url('https://i.ibb.co/9w8DhCK/Rectangle-49-1.png');
+        background-repeat: no-repeat;
+        background-size: cover;"
+        >
+
+        <!-- <section id="generativeBook"> -->
+            <img id="generativeBookImg" src="coverImgs/0.jpg"  alt="generative book cover" 
+            class="knjiga flex justify-center mx-auto mt-0">
+        <!-- </section> -->
+
+          <h1 class="text-4xl sm:text-5xl py-12" style="font-family: MuseoModerno;">A Present from the Postcapitalist Future</h1>
+          <button class="flex justify-center mx-auto py-6 px-10 border border-4 rounded-full border-white" id="publishBookButton">PUBLISH THE BOOK</button>
+
+        <!-- <div class="flex justify-between">
+            <p class="flex justify-center mx-auto py-6">::</p> -->
+            <a class="flex justify-center mx-auto py-6" id="knowMoreLink" href="#">KNOW MORE</a>
+            <!-- <p class="flex justify-center mx-auto py-6">::</p>
+        </div> -->
+
+    </div>
 
     <div id="default-carousel" class="relative w-full sm:hidden" data-carousel="static">
         <!-- Carousel wrapper -->
@@ -257,25 +315,119 @@
     <hr class="h-px mb-8 bg-gray-200 border-0">
 
     <!-- BUTTONS -->
+    
+<div x-data="{ tab: '#tab1' }" class="">
+
     <div class="w-full sm:w-3/5 sm:py-16 sm:px-20 flex flex-row sm:flex px-4 py-2">
-        <a href="" class="px-8 sm:px-16 py-6 mx-6 rounded-full border border-white text-2xl">READY</a>
+
+        <!-- CO-PUBLISH -->
+        <div x-on:click.prevent="tab='#tab1'" href="#" class="px-4 sm:px-16 py-2 sm:py-6 ml-3 rounded-full border border-white text-md sm:text-2xl text-center cursor-pointer">CO-PUBLISH</div>
+        <!-- HOW -->
+        <div x-on:click.prevent="tab='#tab2'" href="#" class="px-4 sm:px-16 py-2 sm:py-6 mx-6 rounded-full border border-white text-md sm:text-2xl text-center cursor-pointer">HOW</div>
+        <!-- RIGHTS -->
+        <div x-on:click.prevent="tab='#tab3'" href="#" class="px-4 sm:px-16 py-2 sm:py-6 mr-3 rounded-full border border-white text-md sm:text-2xl text-center cursor-pointer">RIGHTS</div>
+
     </div>
+
 
     <!-- We invite you to co-publish... -->
     <div class="flex">
-        <div class="text-white w-full sm:w-3/5 ml-6">
-            <p class="text-xl sm:text-4xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;">We want publishing to be a collective effort. Buy your favorite 
-                paragraph to reveal it to the world and receive the full book and have the option to be a founding member of the project that is descending from it.</p>
+        <div class="text-white ml-6">
+
+            <!-- PRVI TAB -->
+            <div x-show="tab == '#tab1'" x-cloak class="flex">
+                
+                <div class="w-full sm:w-1/2">
+                    <p class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;">We invite you to co-publish the book as an open access publication and strategic 
+                        intervention in the political economy.</p>
+                    <p class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;"> It is organized in 729 discourse units encoded as unique NFTs with generative rights, unleashing postcapitalism as an ongoing collective discourse challenging economic norms. <b>The project aims to generate a community, 
+                        engage in discourse generation, and rethink knowledge and value, while challenging traditional publishing and intellectual property dynamics.</b></p>
+                </div>
+                    
+                <div class="flex flex-col hidden sm:block">
+                    <div class="pb-10">
+                        <img src="/imgs/64.png" style="width:694px;height:767px;" class="bg-black">
+                    </div>
+                    <div class="text-black flex justify-end py-20">
+                        <div class="px-20 py-8 rounded-full border border-white text-3xl bg-white font-bold tracking-wider">PUBLISH THE BOOK</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DRUGI TAB  -->
+            <div x-show="tab == '#tab2'" x-cloak class="flex text-center">
+                
+                <div class="w-full sm:w-1/2">
+                    <h4 class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4 font-bold" style="font-family: Source Code Pro;">Become a copublisher</h4>
+                    <p class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;"> Each NFT represents a book paragraph/glossary word, a discourse unit. Acquiring it also reveals the unit for public reading, turning it into a commons.</p>
+                    
+                    <!-- <div class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;">
+                        
+                    </div> -->
+
+                    <div class="flex justify-center text-center items-center py-6 sm:pt-12">
+                        <i id="howContentLeftArrow" class="fa-solid fa-chevron-left text-xl px-2"></i>
+                        <p id="howContentCurrent" class="text-xl sm:text-3xl px-2">1</p>
+                        <p class="text-xl sm:text-3xl px-0">/</p>
+                        <p class="text-xl sm:text-3xl px-2">8</p>
+                        <i id="howContentRightArrow" class="fa-solid fa-chevron-right text-xl px-2"></i>
+                    </div>
+
+                </div>
+                    
+                <div class="flex flex-col hidden sm:block">
+                    <div class="pb-10">
+                        <img src="/imgs/64.png" style="width:694px;height:767px;" class="bg-black">
+                    </div>
+                    <div class="text-black flex justify-end py-20">
+                        <div class="px-20 py-8 rounded-full border border-white text-3xl bg-white font-bold tracking-wider">PUBLISH THE BOOK</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRECI TAB -->
+            <div x-show="tab == '#tab3'" x-cloak class="flex" >
+
+                <div class="w-full sm:w-1/2 pt-6">
+                    <p class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-12 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;">
+                        As an unit of discourse holder, you get the following rights:</p>
+
+                        <p class="text-xl sm:text-3xl tracking-widest  w-full pt-12 pb-2 sm:pb-6 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;">
+                            -download the book-PDF</p>
+                        <p class="text-xl sm:text-3xl tracking-widest  w-full pb-2 sm:pb-6 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;">
+                            -get the printed copy of the book</p>
+                        <p class="text-xl sm:text-3xl tracking-widest  w-full pb-2 sm:pb-6 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;">
+                            -access the ECSA token presale</p>
+                        <p class="text-xl sm:text-3xl tracking-widest  w-full pb-2 sm:pb-6 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;">
+                            -access the Discord</p>
+                        <p class="text-xl sm:text-3xl tracking-widest  w-full pb-6 sm:pb-6 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;">
+                            -govern the DAO</p>
+
+                </div>
+                    
+                <div class="flex flex-col hidden sm:block">
+                    <div class="pb-10">
+                        <img src="/imgs/64.png" style="width:694px;height:767px;" class="bg-black">
+                    </div>
+                    <div class="text-black flex justify-end py-20">
+                        <div class="px-20 py-8 rounded-full border border-white text-3xl bg-white font-bold tracking-wider">PUBLISH THE BOOK</div>
+                    </div>
+                </div>
+
+                
+            </div>
         </div>
 
-        <div class="flex flex-col hidden sm:block">
+</div>
+
+        <!-- <div class="flex flex-col hidden sm:block">
             <div class="pb-10">
-                <img src="/imgs/47.png" style="width:750px;height:400px;" class="bg-black">
+                <img src="/imgs/64.png" style="width:694px;height:767px;" class="bg-black">
             </div>
             <div class="text-black flex justify-end py-20">
                 <div class="px-20 py-8 rounded-full border border-white text-3xl bg-white font-bold tracking-wider">PUBLISH THE BOOK</div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -405,8 +557,8 @@
 
     </div>
 
-        <!-- INTRODUCING THE ECONOMIC NETWORKS -->
-        <div style="background-image: url('https://i.ibb.co/FYbq1fG/Rectangle-53.png');
+    <!-- INTRODUCING THE ECONOMIC NETWORKS -->
+    <div style="background-image: url('https://i.ibb.co/FYbq1fG/Rectangle-53.png');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;"
@@ -451,9 +603,8 @@
 
         </div>
     </div>
-    
-</body>
 
+</body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
 </html>
@@ -463,18 +614,16 @@
     background: #1b1919;
     opacity: 1;
 }
-/* #button1 {
-    background-color: black;
-    border: 2px;
-    border-color: red;
+.knjiga {
+    width: 288px;
+    height: 435px;
 
-}
-#button2.active {
-    background-color: black;
-}
-#button3.active {
-    background-color: black;
-} */
+    @media screen and (max-width: 640px) {
+        width: 144px;
+        height: 218px;
+    }
+
+  }
 </style>
 
 <script type="text/javascript">
