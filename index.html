@@ -341,8 +341,8 @@
                 <div x-show="tab == '#tab2'" x-cloak class="flex text-center">
                     
                     <div class="w-full sm:w-1/2">
-                        <h4 class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4 font-bold" style="font-family: Source Code Pro;">Become a copublisher</h4>
-                        <p class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;"> Each NFT represents a book paragraph/glossary word, a discourse unit. Acquiring it also reveals the unit for public reading, turning it into a commons.</p>
+                        <h4 class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4 font-bold" style="font-family: Source Code Pro;" id="howContentHeading">Become a copublisher</h4>
+                        <p class="text-xl sm:text-3xl tracking-widest leading-loose w-full pb-10 px-2 sm:px-16 tracking-widest sm:ml-4" style="font-family: Source Code Pro;" id="howContentText"> Each NFT represents a book paragraph/glossary word, a discourse unit. Acquiring it also reveals the unit for public reading, turning it into a commons.</p>
 
                         <div class="flex justify-center text-center items-center py-6 sm:pt-12">
                             <i id="howContentLeftArrow" class="fa-solid fa-chevron-left text-xl px-2 cursor-pointer"></i>
@@ -619,8 +619,88 @@
     // Trigger the function when the page loads
     window.onload = function() {
     changeButtonContent();
-    // Change the button content every 4 seconds (4000 milliseconds)
-    setInterval(changeButtonContent, 4000);
+    changeHowContent();
+    // Change the button content every 5 seconds (5000 milliseconds)
+    setInterval(changeButtonContent, 5000);
     };
 
+    //Publish the book together section
+
+
+    // TO BE DONE
+    function changeHowContent(){
+
+
+        let current = 1;
+
+        const howsTitles =  [
+        ``,
+        `Become a co-publisher:`,
+        `Get the PDF & Print Book: `,
+        `Enrich the Discourse: `,
+        `Value the Discourse: `,
+        `Expand Your Economic Options: `,
+        `Generate the Discourse: `,
+        `Enjoy the open access publication experience:`,
+        `Become a Stakeholder in the Discourse:`
+        ];
+        
+        const howsContent = [
+        ``,
+        `Each NFT represents a book paragraph/glossary word, a discourse unit. Acquiring it also reveals the unit for public reading, turning it into a commons.`,
+        `Your NFT grants access to a PDF version of the book with a unique cover, helping you understand the context and value of your discourse unit. You will also get the right to get the print-copy of the book.`,
+        `As an NFT holder, invite up to three comrades who can enrich the discourse.`,
+        `List your NFT in markets to spread the discourse and influence its valuation.`,
+        `The NFT provides access to the ECSA token multistake whitelist.`,
+        `Share insights, engage with the discourse, participate in discourse-shaping discussions, online and offline.`,
+        `When all the NFTs have been purchased, the entire open access publication experience is revealed: the book website, its mobile version, audiobook, different download options etc.`,
+        `After the book fully revealed, it will also be released as a singular fractional NFT: you become a stakeholder of its value as an informational asset, minting new NFTs to grow the network.`
+        ];
+
+
+        var howContentLeftArrow = document.getElementById('howContentLeftArrow');
+        var howContentRightArrow = document.getElementById('howContentRightArrow');
+        var howContentCurrent = document.getElementById('howContentCurrent');
+
+        // 
+        var howContentHeading = document.getElementById('howContentHeading');
+        var howContentText = document.getElementById('howContentText');
+
+
+        howContentLeftArrow.addEventListener('click', function() {
+
+            console.log('this happened');
+
+            if(current == 1){
+                current = 1;
+            }
+            else{
+                current--;
+            }
+            console.log('current', current);
+            howContentCurrent.innerHTML = current;
+            howContentHeading.innerHTML = howsTitles[current];
+            howContentText.innerHTML = howsContent[current];
+        });
+
+        howContentRightArrow.addEventListener('click', function() {
+
+            console.log('this happened');
+
+            if(current == 8){
+                current = 1;
+            }
+            else{
+                current++;
+            }
+            howContentCurrent.innerHTML = current;
+            howContentHeading.innerHTML = howsTitles[current];
+            howContentText.innerHTML = howsContent[current];
+        });
+
+
+    }
+
+    // arrow to the next section, on click:
+    
   </script>
