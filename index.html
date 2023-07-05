@@ -78,7 +78,7 @@
 
         <h1 class="text-4xl sm:text-5xl py-12" style="font-family: MuseoModerno;">A Present from the Postcapitalist Future</h1>
         <button id="publishBookButton" class="flex justify-center mx-auto py-6 px-10 border border-4 rounded-full border-white" id="publishBookButton">PUBLISH THE BOOK</button>
-        <a class="flex justify-center mx-auto py-6" id="knowMoreLink" href="#">KNOW MORE</a>
+        <button class="flex justify-center mx-auto py-6" id="knowMoreLink" href="#">KNOW MORE</a>
 
     </div>
 
@@ -793,6 +793,14 @@ of action.</div>
 
         // Scroll to the target element
         publishElement.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('knowMoreLink').addEventListener('click', function() {
+        // Get the target element by its ID
+        const discourseElement = document.getElementById('discourseElement');
+
+        // Scroll to the target element
+        discourseElement.scrollIntoView({ behavior: 'smooth' });
     });
 
     }
