@@ -15,12 +15,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://kit.fontawesome.com/5592293c7c.js" crossorigin="anonymous"></script>
     <script async src="https://tally.so/widgets/embed.js"></script>
-
-
 </head>
 <body class="bg-black text-white">
-
-
 
     <nav class="bg-black text-white fixed w-full z-20 top-0 left-0">
         <div class="flex flex-wrap items-center justify-between mx-auto p-4">
@@ -416,14 +412,9 @@
                             <a href="https://tally.so#tally-open=npdY4q&tally-layout=modal&tally-hide-title=1" class="px-20 py-8 rounded-full border border-white text-3xl bg-white font-bold tracking-wider">APPLY FOR INVITE</a>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
-
-
-
     </div>
 
     <!-- Meet the Discourse Developers -->
@@ -441,7 +432,7 @@
                     <p class="text-4xl pt-8 pb-6 font-medium">Dick Bryan</p>
                 </div>
                 <div class="text-center text-black">
-                    <p class="font-bold text-4xl font-semibold pb-6">Economic cubist</p>
+                    <p class="font-bold text-4xl font-semibold pb-6">Economic Cubist</p>
                 </div>
             </div>
 
@@ -454,7 +445,7 @@
                     <p class="text-4xl pt-8 pb-6 font-medium">Jorge Lopez</p>
                 </div>
                 <div class="text-center text-black">
-                    <p class="font-bold text-4xl font-semibold pb-6">Network Coreographer</p>
+                    <p class="font-bold text-4xl font-semibold pb-6">Network Choreographer</p>
                 </div>
             </div>
 
@@ -688,7 +679,7 @@
         
         const howsContent = [
         ``,
-        `First step is to apply for an invite right here or get one from an exiting Discourse Unit holder.`,
+        `First step is to apply for an invite right here or get one from an existing discourse unit holder.`,
         `Each NFT represents a book paragraph/glossary word, a discourse unit. Acquiring it also reveals the unit for public reading, turning it into a commons.`,
         `Your NFT grants access to a PDF version of the book with a unique cover, helping you understand the context and value of your discourse unit. You will also get the right to get the print-copy of the book.`,
         `As an NFT holder, invite up to three comrades who can enrich the discourse.`,
@@ -778,6 +769,15 @@
 
         const targetElement = document.getElementById(targetDivId);
         targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+
+    var menuItems = document.querySelectorAll("#navbar-sticky button");
+        menuItems.forEach(function(item) {
+            item.addEventListener("click", function() {
+                // Toggle the visibility of the menu
+                var menu = document.getElementById("navbar-sticky");
+                menu.classList.toggle("hidden");
+            });
         });
     
   </script>
