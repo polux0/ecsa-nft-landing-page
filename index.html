@@ -141,11 +141,18 @@ of action.</div>
     </div>
 
     <!-- Bela pozadina -->
-    <div class="bg-white text-black">
-        <p id="quotes" class="italic text-2xl sm:text-4xl py-20 px-4 w-full sm:w-3/4 mx-auto text-center tracking-widest" style="font-family: Source Code Pro; z-index:1;">
+    <!-- <div class="bg-white text-black h-96">
+        <p id="quotes" class="h-full italic text-2xl sm:text-4xl py-10 px-4 w-full sm:w-3/4 mx-auto text-center tracking-widest" style="font-family: Source Code Pro; z-index:1;">
             "From the material to the informational, the static to the
              dynamic, the isolated to the networked"</p>
-    </div>
+    </div> -->
+    <div class="bg-white text-black h-96">
+        <div class="quote-container">
+          <p id="quotes" class="italic text-2xl sm:text-4xl px-4 w-full sm:w-3/4 mx-auto tracking-widest">
+            From the material to the informational, the static to the dynamic, the isolated to the networked
+          </p>
+        </div>
+      </div>
 
     <!-- Key Properties -->
     <div>
@@ -606,6 +613,19 @@ of action.</div>
 .strelica {
     rotate: -45deg;
 }
+.quote-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+  }
+
+  #quotes {
+    text-align: center;
+    font-family: Source Code Pro;
+  }
 
 </style>
 
@@ -626,8 +646,8 @@ of action.</div>
     [`"We need a set of shared economic protocols, rather than only blockchain ones."`,
     `"We're not just redefining value, we're expanding it. From the material to the informational, the static to the dynamic, the isolated to the networked."`,
     `"In the postcapitalist era, art and play aren't just forms of expression, they're powerful forces of change, reshaping the political landscape and transforming our world."`,
-    `"Decolonisation of finance is not a question of escape, but rather of reappropriating the capacity of assembly, of affinity, of association, of value giving circulation that capital & finance claim to belong to them."`,
-    `"Our wager is that a clear spread will open between what the old and the new economic space make possible - there is a clear difference in their expressive capacity, accessibility, stability, adaptability, scalability, privacy, functional equality and programmability. When people start to feel this, on which side of the spread do you want to be?"`
+    //`"Decolonisation of finance is not a question of escape, but rather of reappropriating the capacity of assembly, of affinity, of association, of value giving circulation that capital & finance claim to belong to them."`,
+    //  `"Our wager is that a clear spread will open between what the old and the new economic space make possible - there is a clear difference in their expressive capacity, accessibility, stability, adaptability, scalability, privacy, functional equality and programmability. When people start to feel this, on which side of the spread do you want to be?"`
     ]
 
     // Function to change the button content randomly
