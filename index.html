@@ -82,9 +82,10 @@
 
     </div>
 
-    <div id="default-carousel" class="relative w-full sm:hidden" data-carousel="static">
+    <div id="default-carousel" class="relative w-full sm:hidden" data-carousel="static" style="z-index:10">
         <!-- Carousel wrapper -->
-        <div class="relative h-96 overflow-hidden rounded-lg md:h-96" style="z-index:1;">
+        <!-- <div class="relative h-96 overflow-hidden rounded-lg md:h-96" style="z-index:1;"> -->
+        <div class="relative h-96 overflow-hidden rounded-lg md:h-96">
              <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <div class="w-full mb-12">
@@ -109,7 +110,7 @@ of action.</div>
             </div>
         </div>
         <!-- Slider indicators -->
-        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2" style="z-index:-1;">
+        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
             <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
@@ -476,9 +477,9 @@ of action.</div>
 
         </div>
 
-        <div id="default-carousel" class="relative w-full sm:hidden" data-carousel="static">
+        <div id="default-carousel" class="relative w-full sm:hidden" data-carousel="static" style="z-index:10">
             <!-- Carousel wrapper -->
-            <div class="relative h-96 overflow-hidden rounded-lg md:h-96" style="z-index:1;">
+            <div class="relative h-96 overflow-hidden rounded-lg md:h-96">
                  <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <div class="flex flex-col py-2">
@@ -526,7 +527,7 @@ of action.</div>
                 </div>
             </div>
             <!-- Slider indicators -->
-            <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2" style="z-index:0;">
+            <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
                 <button id="button1" type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
                 <button id="button2" type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
                 <button id="button3" type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
